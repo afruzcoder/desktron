@@ -12,9 +12,14 @@
   "app": {
     "windows": [
       {
-        "title": "my-ai-desktop",
-        "width": 800,
-        "height": 600
+        "label": "main",
+        "title": "DeskTron",
+        "width": 1080,
+        "height": 720,
+        "minWidth": 900,
+        "minHeight": 560,
+        "center": true,
+        "decorations": false
       }
     ],
     "security": {

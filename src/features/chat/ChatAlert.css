@@ -1,0 +1,120 @@
+.chat-alert {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  animation: alert-in 240ms var(--ease-out) both;
+}
+
+.chat-alert--warning {
+  border-color: rgba(232, 180, 95, 0.28);
+  background: var(--warning-soft);
+}
+
+.chat-alert--error {
+  border-color: rgba(255, 107, 114, 0.28);
+  background: var(--danger-soft);
+}
+
+.chat-alert__content {
+  display: flex;
+  gap: 10px;
+  min-width: 0;
+}
+
+.chat-alert__icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.chat-alert--warning .chat-alert__icon {
+  background: rgba(232, 180, 95, 0.16);
+  color: var(--warning);
+}
+
+.chat-alert--error .chat-alert__icon {
+  background: rgba(255, 107, 114, 0.16);
+  color: var(--danger);
+}
+
+.chat-alert__text {
+  min-width: 0;
+}
+
+.chat-alert__title {
+  color: var(--text);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.chat-alert__message {
+  margin-top: 1px;
+  color: var(--text-muted);
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+.chat-alert__actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.chat-alert__action {
+  height: 24px;
+  padding: 0 8px;
+  border: 1px solid var(--border-strong);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--text);
+  font-size: 10.5px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.chat-alert__action:hover {
+  background: var(--surface-hover);
+  border-color: var(--text-faint);
+}
+
+.chat-alert__dismiss {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--text-faint);
+  transition: background var(--transition), color var(--transition);
+}
+
+.chat-alert__dismiss:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+@keyframes alert-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
